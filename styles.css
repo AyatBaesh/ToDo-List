@@ -1,0 +1,145 @@
+:root {
+    --white: #fff;
+    --black: #000;
+  
+    /* Primary colors*/
+    --primary-1: #2b8379;
+    --primary-2: #19a596;
+    --primary-3: #7fd1c7;
+    --primary-4: #7fd1c7;
+    --primary-5: #d0f3ef;
+  
+    /* Neutral colors */
+    --neutral-1: #2c2c2c;
+    --neutral-2: #434343;
+    --neutral-3: #94868b;
+    --neutral-4: #d9cfd3;
+    --neutral-5: #f2ecee;
+  
+    /* Accent-blue colors */
+    --accent-1: #970e3d;
+    --accent-2: #c43464;
+    --accent-3: #de7699;
+    --accent-4: #e6c3ce;
+    --accent-5: #fff2f7;
+  }
+  *{
+    box-sizing: border-box;
+  }
+  .container {
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  body {
+    background-color: var(--neutral-5);
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-size: 36px;
+    font-weight: 600;
+  }
+
+  /* NAVBAR */
+.navbar {
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.07),
+      0px -3px 7px 1px rgba(0, 0, 0, 0.07);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .nav-brand {
+    font-weight: 450;
+    text-decoration: none;
+    padding-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: initial;
+  }
+
+
+
+  /* FORMS */
+  .form{
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+  }
+
+  .label {
+    display: block;
+    font-weight: 500;
+    margin:0.5em;
+  }
+  .select{
+    max-width: 200px;
+    margin: 0.5em 0;
+
+  }
+  .input {
+    font-size: 16px;
+    padding: 0.75em 0.5em;
+    margin-bottom: 0.5em;
+    min-width: 200px;
+    border: none;
+    border-left: 7px solid var(--neutral-4);
+    transition: border-left-color 160ms;
+    background-color: white;
+  }
+  
+  ::placeholder {
+    color: var(--neutral-3);
+  }
+  
+  .input:focus {
+    outline: none;
+    border-left: 7px solid var(--primary-1);
+  }
+  #firstname, #lastname{
+    flex-direction: row;
+  }
+  
+    /* BUTTONS */
+.btn {
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 13px 40px;
+    border: 0;
+    max-width:200px;
+    transition: background-color 200ms, color 200ms;
+  }
+  
+  .btn-default {
+    color: var(--white);
+    background-color: var(--primary-1);
+  }
+  
+  .btn-default:hover {
+    color: var(--white);
+    background-color: var(--primary-2);
+    text-decoration: none;
+  }
+  
+  .btn-default:active {
+    color: var(--primary-1);
+    background-color: var(--primary-4);
+  }
+  
+  /* LISTS */
+  #todo-list{
+    list-style: none;
+    padding-left: 0;
+  }
+  .todo-task{
+    background-color: var(--white);
+    max-width:200px;
+ 
+  }
+  

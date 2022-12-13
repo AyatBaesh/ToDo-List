@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+    <link rel ="stylesheet" href = "styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="nav-brand">Todo list</h1>
+    </nav>
+    
+    <main class="container">
+        <form id="todo-list-form" class = "form">
+            <div>
+                <label class="label" for="firstname">First Name:</label>
+                <input type="string" class="input" required placeholder="First name" id="firstname">
+                <label class="label" for="component-name">Last Name:</label>
+                <input type="string" class="input" required placeholder="Last name" id="lastname">
+                <label class="label" for="todo-title" id="lastlabel">Add task</label>
+                <input type="string" class="input" required placeholder="Task title" id="todo-title">
+            </div>
+            <label>
+                <input type="checkbox" id="todo-completed" value="" /> Is completed?
+            </label>
+            <select required id="todo-category" class = "select">
+                <option value="" selected disabled>Select category</option>
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+            </select>
+            <input type="submit" class="btn btn-default" value="Add" />
+        </form>
+        <ul id="todo-list"></ul>
+    </main>
+    <script src = "scripts/main.js" type = "module"></script>
+</body>
+</html>
