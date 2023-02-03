@@ -11,8 +11,8 @@ let firstName = document.querySelector("#firstname");
 let lastName = document.querySelector("#lastname");
 
 function render(todo){
-    toDoList.innerHTML = `<li class = todo-task>${todo.icon} <strong> ${todo.task}
-     - by ${todo.author.firstName} ${todo.author.lastName} in category ${todo.category}</li>`
+    toDoList.insertAdjacentHTML("beforeend",`<li class = todo-task>${todo.icon} <strong> ${todo.title}
+     - by ${todo.author.firstName} ${todo.author.lastName} in category ${todo.category}</li>`);
 }
 
 form.addEventListener("submit", (event) => {
@@ -23,11 +23,12 @@ form.addEventListener("submit", (event) => {
     };
     let values = {
         todoTitle: taskTitle.value,
-        completed: taskCompleted.value,
+        completed: taskCompleted.checked,
         chosenCategory: taskCategory.value,
         user: author
     };
+    
     let todo = createTodo(values);
-    taskTitle.value = "";
+    // taskTitle.value = "";
     render(todo);
 })

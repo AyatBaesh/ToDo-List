@@ -1,5 +1,4 @@
 export function createTodo(data) {
-    console.log(data);
     let newData = {
         title : data.todoTitle,
         isCompleted : data.completed,
@@ -9,7 +8,7 @@ export function createTodo(data) {
             lastName : data.user.last
         }
     }
-        if(newData.isCompleted === true){
+        if(newData.isCompleted){
             newData.icon = `✅`;
         }else{
             newData.icon = `⏳`;
